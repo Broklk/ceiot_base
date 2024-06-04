@@ -1,11 +1,11 @@
 # Ejercicio CiberKillChain - Ataque
 
- * Alumno: Luis Gabriel Rueda Yarlequé
- * Muy breve descripción del trabajo práctico con link si hay
- * Resolución
+Alumno: Luis Gabriel Rueda Yarlequé
 
-## Descripción
+## Sistema víctima
 
+
+![alt text](https://github.com/Broklk/ceiot_base/CIBS/ejercicio_1_ciberkillchain_ataque/Diag_bloques.jpg?raw=true)
 
 
 ## Cyberkillchain
