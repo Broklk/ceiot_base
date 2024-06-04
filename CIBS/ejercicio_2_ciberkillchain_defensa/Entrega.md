@@ -1,7 +1,5 @@
 # Ejercicio CiberKillChain - Defensa
 
-## Alumno
-
 Alumno: Luis Gabriel Rueda Yarlequpe
 
 ## Enunciado
