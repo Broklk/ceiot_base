@@ -5,7 +5,7 @@ Alumno: Luis Gabriel Rueda Yarlequé
 ## Sistema víctima
 
 
-![Diagrama de bloques](https://github.com/Broklk/ceiot_base/CIBS/ejercicio_1_ciberkillchain_ataque/Diag_bloques.png?raw=true)
+![Diagrama de bloques](Diag_bloques.png)
 
 
 ## Cyberkillchain
