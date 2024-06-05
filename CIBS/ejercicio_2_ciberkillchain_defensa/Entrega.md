@@ -9,3 +9,24 @@ Desarrollar la defensa en función del ataque planteado en orden inverso. No es 
 Para cada etapa elegir una sola defensa, la más importante, considerar recursos limitados.
 
 ## Resolución
+
+* Reconnaissance
+  - 
+
+* Weaponization
+  - 
+
+* Delivery
+  - 
+
+* Exploit
+  - 
+
+* Installation
+  - 
+
+* Command & Control
+  - 
+
+* Actions on Objectives
+  - 

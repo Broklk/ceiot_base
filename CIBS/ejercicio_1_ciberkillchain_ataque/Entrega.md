@@ -19,32 +19,35 @@ Armar una cyberkillchain usando técnicas de la matriz de Att&ck para un escenar
 
 El atacante es una organización criminal que antes de la implementación de este sistema de estacionamiento itinerario inteligente controlaban los estacionamientos, cobrando a los usuarios por el uso de los estacionamientos y el cuidado de los automoviles; cuando se implemento el sistema de estacionamiento itinerario se puso mas seguridad en los estacionamientos, por lo cual, ya no pueden operar.
 
-El atacante se ha asesorado y busca sabotear el sistema de estacionamiento itinerario con la finalidad de que los usuarios vean inutil el sistema y a traves de reclamos se de la baja del sistema y los estacionamientos se continuen manejando por esta organización criminal.
+El atacante se ha asesorado y busca sabotear el sistema de estacionamiento itinerario, modificando la información que llega a la nube con la finalidad de que los usuarios vean inutil el sistema (No se brinde el estatus correcto de los estacionamientos o se multen a usuarios injustamente) y a traves de reclamos se de la baja del sistema y los estacionamientos se continuen manejando por esta organización criminal.
 
 ### Ataque
 
 * Reconnaissance
-  - Recopilar información sobre la arquitectura, componentes, protocolos de comunicación y flujo de datos del sistema. [T1592 - Gather Victim Host Information](https://attack.mitre.org/techniques/T1592/)
+  - Recopilar información sobre los componentes, protocolos de comunicación, IPs y flujo de datos del sistema. [T1592 - Gather Victim Host Information](https://attack.mitre.org/techniques/T1592/)
+  - Recopilar información sobre la arquitectura del sistema. [T1590 - Gather Victim Network Information](https://attack.mitre.org/techniques/T1590/)
+
 
 * Weaponization
-  - Desarrollar herramientas y códigos maliciosos para interceptar y modificar los datos enviados por los sensores/nodos ESP32. [T1587.001 - Develop Capabilities: Malware](https://attack.mitre.org/techniques/T1587/001/))
-  -------------------------------------------------------------------
+  - Desarrollar un exploit para explotar las vulnerabilidades de los principales browsers y adquirir credenciales de la sesión. [T1587.004 - Develop Capabilities: Exploit](https://attack.mitre.org/techniques/T1587/004/)
+  - Desarrollar un malware para interceptar y modificar los datos enviados por los nodos ESP32 al servidor IoT. [T1587.001 - Develop Capabilities: Malware](https://attack.mitre.org/techniques/T1587/001/)
+  - Elaborar un link malicioso para capturar credenciales del browser. [T1608.005 - Stage Capabilities: Link Target](https://attack.mitre.org/techniques/T1608/005/)
+
 * Delivery
-  - Obtener acceso físico a los nodos ESP32 o puntos de acceso en la red mediante ingeniería social. T1557 - https://attack.mitre.org/techniques/T1556/
-  
+  - Lanzar campañas de phishing la organización con el link. [T1566.002 - Phishing: Spearphing Link](https://attack.mitre.org/techniques/T1566/002/)
+  - El usuario mediante un correo electrónico es convencido de hacer click en el link. [T1204.001 - User Execution: Malicious Link](https://attack.mitre.org/techniques/T1204/001/)
+
 * Exploit
-  - Explotar vulnerabilidades en los protocolos de comunicación o en la configuración de seguridad de los nodos ESP32 o la red. [T1190 - Exploit Public-Facing Application](https://attack.mitre.org/techniques/T1190/)
-  
-* Installation  
-  - Instalar herramientas de interceptación y manipulación de tráfico en los puntos de acceso comprometidos. 
-[T1556 - Modify Authentication Process](https://attack.mitre.org/techniques/T1556/)
-  - Configurar reglas o scripts para modificar los datos. T1600 - Proxy Malicioso
+  - Se explotan las vulnerabilidades del browser del usuario para adquirir credenciales, se buscan credenciales al servidor IoT. [T1212 - Exploitation for Credential Access](https://attack.mitre.org/techniques/T1212/)
+
+* Installation
+  - En el servidor IoT se crea un servicio que ejecute el malware que modifica los datos enviados por los nodos ESP32. [T1543.002 - Create or Modify System Process: Systemd Service](https://attack.mitre.org/techniques/T1543/002/)
 
 * Command & Control
-  - Establecer un canal de comunicación encubierto con los puntos de acceso comprometidos. T1573 - Protocolo de Red Encubierto
-  - Utilizar técnicas como canales encubiertos, túneles inversos o redes de comando y control. T1572 - Comunicación Encubierta entre Hosts
-  
+  - Establecer un canal de comunicación encubierto, modificando el DNS del sistema, con lo cual el trafico de comunicación parecerá un trafico esperado. [T1071.004 - Applicacion Layer Protocol: DNS](https://attack.mitre.org/techniques/T1071/004/)
+  - Utilizar técnicas para ocultar la IP y geolocalización del atacante, entregando otra información en la comunicacion con el sistema de la victima. [T1665 - Hide Infrastructure](https://attack.mitre.org/techniques/T1665/)
+
 * Actions on Objectives
-  - Interceptar y modificar los datos enviados por los sensores/nodos ESP32 sobre la disponibilidad de estacionamientos o los límites de tiempo permitidos. T1499 - Sabotaje de Datos
-  - Inyectar información falsa o engañosa para mostrar estacionamientos disponibles o tiempos límite incorrectos. T1565 - Inyección de Datos Manipulados
-  - Eliminar rastros de la actividad maliciosa, como el borrado de registros de eventos o archivos temporales. T1070 - Borrado de Credenciales
+  - Eliminar los servicios relacionados a la recuperación del sistema y accesos a backups, para que el sistema no pueda ser reestablecido [T1490 - Inhibit System Recovery](https://attack.mitre.org/techniques/T1490/)
+  - Inyectar información falsa o engañosa para mostrar estacionamientos disponibles o tiempos límite incorrectos. [T1565.002 - Data Manipulation: Transmitted Data Manipulation](https://attack.mitre.org/techniques/T1565/002/)
+  - Eliminar rastros de la actividad maliciosa, como el borrado de registros de eventos o archivos temporales. [T1485 - Data Destruction](https://attack.mitre.org/techniques/T1485/)
