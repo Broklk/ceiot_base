@@ -23,7 +23,6 @@ Para cada etapa elegir una sola defensa, la más importante, considerar recursos
   - Utilizar herramientas de detección de intrusos para detectar intentos de explotación de vulnerabilidades y bloquearlos automáticamente. [M1031 - Network Intrusion Prevention](https://attack.mitre.org/mitigations/M1031/)
  
 * Delivery
-  - Implementar soluciones de filtrado de correo electrónico para detectar y bloquear correos electrónicos de phishing. [M1054 - Software Configuration](https://attack.mitre.org/mitigations/M1054/)
   - Entrenar a los usuarios contra el phishing para detectar y no caer en phishing. [M1017 - User Training](https://attack.mitre.org/mitigations/M1017/)
  
 * Weaponization
