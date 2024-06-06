@@ -35,9 +35,9 @@ El atacante se ha asesorado y busca sabotear el sistema de estacionamiento itine
 
 * Delivery
   - Lanzar campañas de phishing la organización con el link. [T1566.002 - Phishing: Spearphishing Link](https://attack.mitre.org/techniques/T1566/002/)
-  - El usuario mediante un correo electrónico es convencido de hacer click en el link. [T1204.001 - User Execution: Malicious Link](https://attack.mitre.org/techniques/T1204/001/)
 
 * Exploit
+  - El usuario mediante un correo electrónico es convencido de hacer click en el link. [T1204.001 - User Execution: Malicious Link](https://attack.mitre.org/techniques/T1204/001/)
   - Se explotan las vulnerabilidades del browser del usuario para adquirir credenciales, se buscan credenciales al servidor IoT. [T1212 - Exploitation for Credential Access](https://attack.mitre.org/techniques/T1212/)
 
 * Installation
